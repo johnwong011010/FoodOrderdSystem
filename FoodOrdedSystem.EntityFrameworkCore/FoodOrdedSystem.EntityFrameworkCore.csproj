@@ -7,7 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Repository\" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.26" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\FoodOrdedSystem.Domain\FoodOrdedSystem.Domain.csproj" />
+    <ProjectReference Include="..\FoodOrdedSystem.Infrastructure\FoodOrdedSystem.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

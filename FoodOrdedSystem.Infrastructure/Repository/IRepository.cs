@@ -12,7 +12,7 @@ namespace FoodOrdedSystem.Infrastructure.Repository
         IQueryable<TEntity> Query { get; }
         Task<IEnumerable<TEntity>> GetAll();
         Task<IEnumerable<TEntity>> GetAsync(Expression<Func<TEntity, bool>> predicate);
-        Task<TEntity> GetByIdAsync(TPrimaryKey id);
+        Task<TEntity?> GetByIdAsync(TPrimaryKey id);
         Task<TEntity> AddAsync(TEntity entity);
         Task<TEntity> UpdateAsync(TEntity entity);
         Task DeleteAsync(TEntity entity);
