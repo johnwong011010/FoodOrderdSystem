@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\FoodOrdedSystem.Domain\FoodOrdedSystem.Domain.csproj" />
+    <ProjectReference Include="..\FoodOrdedSystem.EntityFrameworkCore\FoodOrdedSystem.EntityFrameworkCore.csproj" />
+    <ProjectReference Include="..\FoodOrdedSystem.Infrastructure\FoodOrdedSystem.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>

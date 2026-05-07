@@ -1,4 +1,5 @@
 <Solution>
+  <Project Path="FoodOrdedSystem.Application/FoodOrdedSystem.Application.csproj" Id="ec5478eb-d69f-4a9c-8b84-b42bb7c47554" />
   <Project Path="FoodOrdedSystem.Domain/FoodOrdedSystem.Domain.csproj" Id="2ff6bfbd-9ad8-4bc1-8af2-8c01ad1f35a3" />
   <Project Path="FoodOrdedSystem.EntityFrameworkCore/FoodOrdedSystem.EntityFrameworkCore.csproj" Id="27b77ae0-d8ef-4bd4-b854-a729fc764dee" />
   <Project Path="FoodOrdedSystem.Infrastructure/FoodOrdedSystem.Infrastructure.csproj" />
