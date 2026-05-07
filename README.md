@@ -1,6 +1,8 @@
 # This is a exsample domain driven design pattern
 ## FoodOrdedSystem
 All forward endpoint is defined here,It's highly recommend using identity server for backend authenication and authrozation
+## FoodOrdedSystem.Application
+The imperment of business logic go on here,you can add any service as you want.
 ## FoodOrdedSystem.Domain
 The thing related to business is stored here,including business item,logic of CRUD.
 ## FoodOrdedSystem.EntiityFrameworkCore
