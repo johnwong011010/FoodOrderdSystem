@@ -1,3 +1,5 @@
+using FoodOrdedSystem.Application;
+using FoodOrdedSystem.Domain;
 using Microsoft.AspNetCore.Mvc;
 
 namespace FoodOrdedSystem.Controllers
@@ -11,11 +13,13 @@ namespace FoodOrdedSystem.Controllers
             "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
         };
 
+        private readonly IFoodItemService _foodItemService;
         private readonly ILogger<WeatherForecastController> _logger;
 
-        public WeatherForecastController(ILogger<WeatherForecastController> logger)
+        public WeatherForecastController(ILogger<WeatherForecastController> logger, IFoodItemService foodItemService)
         {
             _logger = logger;
+            _foodItemService = foodItemService;
         }
 
         [HttpGet(Name = "GetWeatherForecast")]
@@ -28,6 +32,14 @@ namespace FoodOrdedSystem.Controllers
                 Summary = Summaries[Random.Shared.Next(Summaries.Length)]
             })
             .ToArray();
+        }
+        [HttpGet("/FoodItem")]
+        [ProducesResponseType(typeof(FoodItem), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public async Task<List<FoodItem>?> GetAllFoodItem(int? page,int? pageSize)
+        {
+            var request = await _foodItemService.GetFoodItemListAsync();
+            return request;
         }
     }
 }
