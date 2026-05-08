@@ -37,6 +37,7 @@ namespace FoodOrdedSystem.Application
         }
         public async Task DeleteFoodItem(int fid)
         {
+            throw new NotImplementedException();
         }
     }
 }
